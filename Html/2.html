@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+const monta = parseInt(prompt("monta"));
+
+jasen =[];
+
+for (let i = 0; i <monta; i++ ){
+
+    const nimi = prompt("jasenen nimi" +(i +1));
+
+    jasen.push(nimi);
+}
+ jasen.sort();
+
+ document.write("<ol>");
+
+for (let i = 0; i < jasen.length; i++) {
+    document.write("<li>" + jasen[i] + "</li>");
+}
+
+document.write("</ol>");
+</script>
+
+</body>
+</html>
