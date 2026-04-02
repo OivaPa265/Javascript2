@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let lista = [];
+
+let numero= parseInt(prompt(" monta  "))
+function noppa() {
+    let heitto;
+
+    do {
+        heitto = Math.floor(Math.random() * numero) + 1;
+
+        lista.push(heitto);
+        alert(lista);
+    } while (heitto !== numero);
+}
+
+noppa();
+
+</script>
+
+</body>
+</html>
