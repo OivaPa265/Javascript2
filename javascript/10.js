@@ -1,14 +1,32 @@
 let lista = []
 
-
 let maara= parseInt(prompt("anna määrä"))
-lista.push(maara)
-for(let i =0; i <maara; i++){
-    const anna = prompt(" osallistuja nmr " + (i +1) + " nimi on: ")
+
+for(let i =0; i <maara; i++) {
+    const nimi = prompt(" osallistuja nmr " + (i + 1) + " nimi on: ")
     lista.push({
-        anna: nimi,
+        name: nimi,
         aanet: 0
     })
-
 }
-console.log(lista)
+let aanestaa = parseInt(prompt("kuinka moni heistä äänestää?"));
+
+
+let ehdokas = lista.map(e => e.name).join (",");
+
+for(let e = 0; e <aanestaa; e++);{
+    let aanestajanimi = prompt("  ketäs aatelit äänestää? mahdolliset ehdokaat ovat " + ehdokas);
+
+
+        for (let j =0; j <lista.length; j++){
+            if (lista[j].name === aanestajanimi){
+                lista[j].aanet++;
+
+            }
+        }
+}
+
+lista.sort((a,b) => b.aanet - a.aanet);
+    if(lista.length >0){
+        console.log("Henkilö jolla on eniten äänia on " + lista[0].name)
+    }
